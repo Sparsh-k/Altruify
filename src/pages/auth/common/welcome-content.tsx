@@ -20,36 +20,36 @@ function WelcomeContent(){
     <Carousel data-bs-theme="dark">
       <Carousel.Item>
         <img
-          className="d-block h-max"
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80holder.js/800x400?text=First slide&bg=f5f5f5"
+          className="d-block h-auto"
+          src="https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="First slide"
         />
         <Carousel.Caption>
           <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <p>Quote1</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block h-max"
-          src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+          className="d-block h-auto"
+          src="https://unsplash.com/photos/five-children-smiling-while-doing-peace-hand-sign-AEaTUnvneik"
           alt="Second slide"
         />
         <Carousel.Caption>
           <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Quote2</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block h-max"
-          src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+          className="d-block h-auto"
+          src="https://unsplash.com/photos/red-and-green-plastic-pack-NFoerQuvzrs"
           alt="Third slide"
         />
         <Carousel.Caption>
           <h5>Third slide label</h5>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            Quote3
           </p>
         </Carousel.Caption>
       </Carousel.Item>

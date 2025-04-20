@@ -41,19 +41,19 @@ function Header() {
         {
             key: '1',
             label: (
-                <Link to="/profile">Profile</Link>
+                <Link to="/user/profile">Profile</Link>
             ),
         },
         {
             key: '2',
             label: (
-                <Link to="/donations">Donations</Link>
+                <Link to="/user/donations">Donations</Link>
             ),
         },
         {
             key: '3',
             label: (
-                <Link to="/reports">Reports</Link>
+                <Link to="/user/reports">Reports</Link>
             ),
         },
         {
@@ -70,18 +70,30 @@ function Header() {
 
     const menuItemsToUse: any[] = currentUser?.isAdmin ? adminMenuItems : userMenuItems;
     return (
-        <div className="bg-primary flex justify-between items-center p-5">
-            <h1 className="text-2xl font-bold text-white cursor-pointer"
-                onClick={() => navigate("/")}>
-                Altruify
-            </h1>
+        <div className="bg-teal-950 flex justify-between items-center p-4 shadow-lg">
+    {/* Logo with hover effect */}
+    <h1 className="text-4xl font-extrabold text-white cursor-pointer transition-transform transform hover:scale-105"
+        onClick={() => navigate("/")}>
+        Altruify
+    </h1>
 
-            <Dropdown menu={{ items: menuItemsToUse }} placement="bottom">
-                <Button size="middle" icon={<CircleUserRound size={16}/>}>
-                    {currentUser?.name}
-                </Button>
-            </Dropdown>
-        </div>
+    {/* Navigation Menu aligned to the right */}
+    <nav className="flex space-x-8 ml-auto p-4">
+        <a href="#about-us" className="text-white text-lg hover:text-teal-300 transition-colors">About Us</a>
+        <a href="#contact-us" className="text-white text-lg hover:text-teal-300 transition-colors">Contact Us</a>
+    </nav>
+
+    {/* Dropdown Button */}
+    <Dropdown menu={{ items: menuItemsToUse }} placement="bottom">
+        <Button 
+            size="middle" 
+            icon={<CircleUserRound size={18} />} 
+            className="bg-teal-600 transition-colors shadow-md"
+        >
+            {currentUser?.name}
+        </Button>
+    </Dropdown>
+</div>
     )
 }
 

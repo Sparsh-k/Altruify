@@ -21,3 +21,12 @@ export interface CampaignTypeProps {
     createdAt: string;
     updatedAt: string;
 }
+
+export interface DonationTypeProps {
+    _id: string;
+    amount: number;
+    campaign: CampaignTypeProps;
+    user: UserTypeProps;
+    createdAt: string;
+    updatedAt: string;
+}

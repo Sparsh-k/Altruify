@@ -11,6 +11,12 @@ import PrivateLayout from './layout/private-layout';
 import CampaignsPage from './pages/private/admin/campaigns';
 import CampaignForm from './pages/private/admin/campaigns/campaign-form';
 import CampaignInfoPage from './pages/private/campaign-info';
+import DonationsPage from './pages/private/user/donations';
+import ProfilePage from './pages/private/user/profile';
+import ReportsPage from './pages/private/user/reports';
+import AdminDonationsPage from './pages/private/admin/donations';
+import AdminReportsPage from './pages/private/admin/reports';
+import UsersList from './pages/private/admin/users';
 
 
 function App() {
@@ -58,7 +64,61 @@ function App() {
               <CampaignForm />
             </PrivateLayout>
           }
+          
         />
+        <Route
+            path="/user/donations"
+            element={
+              <PrivateLayout>
+                <DonationsPage />
+              </PrivateLayout>
+            }
+          />
+
+          <Route
+            path="/user/profile"
+            element={
+              <PrivateLayout>
+                <ProfilePage />
+              </PrivateLayout>
+            }
+          />
+
+          <Route
+            path="/user/reports"
+            element={
+              <PrivateLayout>
+                <ReportsPage />
+              </PrivateLayout>
+            }
+          />
+
+          <Route
+            path="/admin/donations"
+            element={
+              <PrivateLayout>
+                <AdminDonationsPage />
+              </PrivateLayout>
+            }
+          />
+
+          <Route
+            path="/admin/reports"
+            element={
+              <PrivateLayout>
+                <AdminReportsPage />
+              </PrivateLayout>
+            }
+          />
+
+          <Route
+            path="/admin/users"
+            element={
+              <PrivateLayout>
+                <UsersList />
+              </PrivateLayout>
+            }
+          />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>

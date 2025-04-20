@@ -15,11 +15,9 @@ function RegisterPage() {
         try {
             setLoading(true);
             await axios.post("/api/users/register", values);
-            console.log("success");
-            message.success("hello");
+            message.success("Registered successfully");
             navigate("/login");
         } catch (error: any) {
-            console.log('failed')
             message.error(error.response.data.message || error.message);
         }
         finally {
@@ -27,18 +25,22 @@ function RegisterPage() {
         }
     };
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
-            <div className="welcome-content bg-primary md:flex justify-center items-center hidden">
+        <div >
+            <div className="welcome-content  md:flex justify-center items-center hidden absolute inset-0">
                 <WelcomeContent />
             </div>
-            <div className="form-content flex items-center justify-center">
-                <Form className="flex flex-col gap-6 w-96" layout="vertical"
-                    onFinish={onSubmit}
-                >
-                    <h1 className="text-2xl font-bold text-primary">
-                        Register your account
-                    </h1>
-                    <hr />
+            <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+                <div className="relative z-10 w-full max-w-md mx-auto bg-white p-8 rounded-lg shadow-2xl">
+                    <div className="flex flex-col items-center mb-6">
+                        <img
+                            className="w-32 h-32 mb-4"
+                            src="https://img.freepik.com/premium-vector/charity-logo-with-love-design-community-love-care_526811-310.jpg?w=1060"
+                            alt="Altruify Logo"
+                        />
+                        <h1 className="text-4xl text-[#89216b] font-bold">ALTRUIFY</h1>
+                    </div>
+                    <h1 className="text-2xl font-bold text-gray-800 mb-4">Register your account</h1>
+                    <Form className="flex flex-col gap-4" layout="vertical" onFinish={onSubmit}>
                     <Form.Item
                         label="Full Name"
                         name="name"
@@ -76,6 +78,7 @@ function RegisterPage() {
                 </Form>
             </div>
         </div>
+    </div>
     )
 }
 

@@ -28,61 +28,45 @@ function LoginPage() {
         }
     };
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
-            <div className="welcome-content  md:flex justify-center items-center hidden">
+        <div >
+            <div className="welcome-content  md:flex justify-center items-center hidden absolute inset-0">
                 <WelcomeContent />
             </div>
-            <div className="form-content flex items-center justify-center">
-
-
-                <Form className="flex flex-col gap-6 w-96"
-                    layout="vertical"
-                    onFinish={onSubmit}
-                >
-                    <div className="flex flex-col gap-6 w-96">
-                        <div className="flex flex-col items-center gap-2">
-                            <img
-                                className="w-60 h-60"
-                                src="https://img.freepik.com/premium-vector/charity-logo-with-love-design-community-love-care_526811-310.jpg?w=1060"
-                            />
-                            <h1 className="text-5xl text-[#89216b] font-bold">
-                                ALTRUIFY
-                            </h1>
-                            <span className="text-sm text-gray-500">
-                                Happiness doesn't result from what we get, but from what we give.
-                            </span>
-                        </div>
+            <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+                <div className="relative z-10 w-full max-w-md mx-auto bg-white p-8 rounded-lg shadow-2xl">
+                    <div className="flex flex-col items-center mb-6">
+                        <img
+                            className="w-32 h-32 mb-4"
+                            src="https://img.freepik.com/premium-vector/charity-logo-with-love-design-community-love-care_526811-310.jpg?w=1060"
+                            alt="Altruify Logo"
+                        />
+                        <h1 className="text-4xl text-[#89216b] font-bold">ALTRUIFY</h1>
                     </div>
-                    <h1 className="text-2xl font-bold text-primary">
-                        Login to your account
-                    </h1>
-                    <hr />
-                    <Form.Item
-                        label="Email"
-                        name="email"
-                        rules={[{ required: true, message: "Please enter your Email!" },
-                        ]}
-                    >
-                        <Input placeholder="Email" />
-                    </Form.Item>
+                    <h1 className="text-2xl font-bold text-gray-800 mb-4">Login to your account</h1>
+                    <Form className="flex flex-col gap-4" layout="vertical" onFinish={onSubmit}>
+                        <Form.Item
+                            label="Email"
+                            name="email"
+                            rules={[{ required: true, message: "Please enter your Email!" }]}
+                        >
+                            <Input placeholder="Email" />
+                        </Form.Item>
 
-                    <Form.Item
-                        label="Password"
-                        name="password"
-                        rules={[{ required: true, message: "Please enter your password!" },
-                        ]}
-                    >
-                        <Input type="password" placeholder="Password" />
-                    </Form.Item>
-                    <Button type="primary" htmlType="submit"
-                        loading={loading}
-                    >
-                        Login
-                    </Button>
-                    <span className="text-sm">
-                        Don't have an account? <Link to="/Register">Register</Link>
-                    </span>
-                </Form>
+                        <Form.Item
+                            label="Password"
+                            name="password"
+                            rules={[{ required: true, message: "Please enter your password!" }]}
+                        >
+                            <Input type="password" placeholder="Password" />
+                        </Form.Item>
+                        <Button type="primary" htmlType="submit" loading={loading} className="mt-4">
+                            Login
+                        </Button>
+                        <span className="text-sm mt-2">
+                            Don't have an account? <Link to="/Register">Register</Link>
+                        </span>
+                    </Form>
+                </div>
             </div>
         </div>
     )
